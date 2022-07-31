@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38z-fS-J79">
+                                <rect key="frame" x="156" y="75" width="63" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="wJj-Js-hOo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="tintColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiT-IS-7Mf">
+                                <rect key="frame" x="119" y="289" width="137" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Qni-mi-zSQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change"/>
+                                <connections>
+                                    <action selector="changedButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAR-Ca-V13"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="tweety" translatesAutoresizingMaskIntoConstraints="NO" id="9HC-fV-peL">
+                                <rect key="frame" x="52" y="147" width="271" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9HC-fV-peL" firstAttribute="centerX" secondItem="eiT-IS-7Mf" secondAttribute="centerX" id="8c8-Ny-eXW"/>
+                            <constraint firstItem="9HC-fV-peL" firstAttribute="top" secondItem="38z-fS-J79" secondAttribute="bottom" constant="28" id="Kuy-X5-KfQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eiT-IS-7Mf" secondAttribute="bottom" constant="421" id="OpU-as-b12"/>
+                            <constraint firstItem="9HC-fV-peL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="Urq-bp-WkN"/>
+                            <constraint firstItem="eiT-IS-7Mf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="VF9-4X-bQ0"/>
+                            <constraint firstItem="38z-fS-J79" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="VJr-8j-hFq"/>
+                            <constraint firstItem="9HC-fV-peL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YDc-8S-TY5"/>
+                            <constraint firstItem="38z-fS-J79" firstAttribute="centerX" secondItem="9HC-fV-peL" secondAttribute="centerX" id="lx6-Yp-eEp"/>
+                            <constraint firstItem="38z-fS-J79" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="sBM-Vu-gD0"/>
+                            <constraint firstItem="eiT-IS-7Mf" firstAttribute="top" secondItem="9HC-fV-peL" secondAttribute="bottom" constant="26" id="sJW-OU-D2E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imsgeView" destination="9HC-fV-peL" id="0Pg-S2-18r"/>
+                        <outlet property="myLabel" destination="38z-fS-J79" id="KK2-ei-Xxq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.40000000000001" y="115.27093596059113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tweety" width="331" height="543"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
